@@ -1,0 +1,388 @@
+
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS Portfolio — Patrick Hullman</title>
+<style>
+  :root{--bg:#0b0b0e;--card:#141418;--muted:#a1a1aa;--text:#e5e7eb;--accent:#7dd3fc;--border:#23232a}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+  a{color:var(--text);text-decoration:none}
+  a:hover{color:var(--accent)}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 20px}
+  header h1{font-size:clamp(28px,4vw,44px);margin:0 0 6px 0}
+  header p{margin:0;color:var(--muted)}
+  nav{margin-top:14px;display:flex;gap:16px}
+  nav a{color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:28px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-height:260px}
+  .thumb{position:relative;aspect-ratio:4/3;background:#0d0d12;outline:none}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.35);border:1px solid var(--border);color:#fff;width:36px;height:36px;border-radius:999px;display:flex;align-items:center;justify-content:center;cursor:pointer}
+  .carousel-btn:hover{background:rgba(0,0,0,.55)}
+  .prev{left:8px}.next{right:8px}
+  .dots{position:absolute;left:0;right:0;bottom:8px;display:flex;gap:6px;justify-content:center}
+  .dot{width:8px;height:8px;border-radius:999px;background:#2e2e36;border:1px solid #3a3a44}
+  .dot.active{background:#8bd2ff}
+  .pad{padding:16px}
+  .title{font-weight:700;font-size:18px;margin:0}
+  .subtitle{color:var(--muted);font-size:13px;margin-top:2px}
+  .desc{margin-top:10px;font-size:14px;color:#d1d5db}
+  .tags{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px}
+  .tag{border:1px solid var(--border);background:#101015;padding:4px 8px;border-radius:999px;font-size:11px;color:#cbd5e1}
+  .links{margin-top:12px;display:flex;flex-wrap:wrap;gap:10px}
+  .btn{display:inline-block;border:1px solid var(--border);padding:8px 10px;border-radius:10px;font-size:13px;background:#0d0d12}
+  .btn:hover{border-color:#2f2f39}
+  section h2{margin:36px 0 8px 0;font-size:20px}
+  footer{border-top:1px solid var(--border);margin-top:32px}
+  footer .wrap{padding:18px 20px}
+
+  
+  header{position:relative;overflow:hidden}
+    
+
+  .banner {
+    position: relative;
+    background: url('./assets/banner.png') center/cover no-repeat;
+    color: #fff;
+  }
+  .banner::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.55); /* dark overlay for contrast */
+    z-index: 0;
+  }
+  .banner .wrap {
+    position: relative;
+    z-index: 1;
+  }
+  .banner h1, .banner p, .banner nav a {
+    color: #fff !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+  }
+    
+
+  /* Banner background with gradient overlay for readability */
+  header{
+    position: relative;
+    overflow: hidden;
+    background:
+      linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+      url('./assets/banner.png') center/cover no-repeat;
+    border-bottom: 1px solid var(--border);
+  }
+  header .wrap{ padding-top:72px; padding-bottom:72px; }
+  header h1{ text-shadow: 0 2px 12px rgba(0,0,0,.65), 0 1px 0 rgba(0,0,0,.4); }
+  header p{ color:#e5e7eb; text-shadow: 0 1px 8px rgba(0,0,0,.6); }
+  nav a{ color:#f1f5f9; background:rgba(0,0,0,.25); padding:4px 8px; border-radius:8px; }
+
+</style>
+<body>
+  <header class="banner"><div class="wrap">
+    <h1>Patrick Hullman</h1>
+    <p>GIS & geospatial analysis — cartography, spatial data engineering, terrain analytics.</p>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div></header>
+  <main id="projects" class="wrap"> 
+    <div class="grid">
+
+      <article class="card">
+        <div class="thumb" tabindex="0" data-images="./assets/thumbs/Geologic Map Of The Wind River Mountains.png" data-index="0">
+          <img src="./assets/thumbs/Geologic Map Of The Wind River Mountains.png" alt="Geologic Map of the Wind River Mountains thumbnail">
+          
+          <div class="dots"></div>
+        </div>
+        <div class="pad">
+          <h3 class="title">Geologic Map of the Wind River Mountains</h3>
+          <div class="subtitle">Bedrock units, structure &amp; cross section</div>
+          <p class="desc">Geologic mapping across the Wind River Range highlighting Archean BIF, Paleozoic carbonates, Quaternary sediments, and structural measurements; includes a cross section A–A′.</p>
+          <div class="tags"><span class="tag">Geology</span><span class="tag">Bedrock</span><span class="tag">Field Mapping</span></div>
+          <div class="links"><a class="btn" href="./assets/pdfs/Geologic Map Of The Wind River Mountains.pdf" download>Download PDF</a></div>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="thumb" tabindex="0" data-images="./assets/thumbs/Urban Planning Map.png" data-index="0">
+          <img src="./assets/thumbs/Urban Planning Map.png" alt="Urban Planning Map thumbnail">
+          
+          <div class="dots"></div>
+        </div>
+        <div class="pad">
+          <h3 class="title">Urban Planning Map</h3>
+          <div class="subtitle">Youngstown region · basemap + labels</div>
+          <p class="desc">Publication-style layout with neighborhoods, hydrology, elevation markers, and major routes.</p>
+          <div class="tags"><span class="tag">Cartography</span><span class="tag">Basemap</span><span class="tag">Labeling</span></div>
+          <div class="links"><a class="btn" href="./assets/pdfs/Urban Planning Map.pdf" download>Download PDF</a></div>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="thumb" tabindex="0" data-images="./assets/thumbs/Ohio Seasonal Homes.png" data-index="0">
+          <img src="./assets/thumbs/Ohio Seasonal Homes.png" alt="Ohio Seasonal Homes thumbnail">
+          
+          <div class="dots"></div>
+        </div>
+        <div class="pad">
+          <h3 class="title">Ohio Seasonal Homes</h3>
+          <div class="subtitle">Choropleth by county (ACS)</div>
+          <p class="desc">Percentage of seasonal homes across Ohio counties using ACS data and balanced classes.</p>
+          <div class="tags"><span class="tag">Choropleth</span><span class="tag">ACS</span><span class="tag">Census</span></div>
+          <div class="links"><a class="btn" href="./assets/pdfs/Ohio Seasonal Homes.pdf" download>Download PDF</a></div>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="thumb" tabindex="0" data-images="./assets/thumbs/University Of Michigan Campus Buildings Map.png" data-index="0">
+          <img src="./assets/thumbs/University Of Michigan Campus Buildings Map.png" alt="U‑M Campus Buildings thumbnail">
+          
+          <div class="dots"></div>
+        </div>
+        <div class="pad">
+          <h3 class="title">U‑M Campus Buildings</h3>
+          <div class="subtitle">Ann Arbor core campus · multi-source data</div>
+          <p class="desc">Unified map of UM and non‑UM buildings with roads and sidewalks across local/regional datasets.</p>
+          <div class="tags"><span class="tag">Data Integration</span><span class="tag">Campus</span><span class="tag">QA/QC</span></div>
+          <div class="links"><a class="btn" href="./assets/pdfs/University Of Michigan Campus Buildings Map.pdf" download>Download PDF</a></div>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="thumb" tabindex="0" data-images="./assets/thumbs/Selected Location For New Airport.png" data-index="0">
+          <img src="./assets/thumbs/Selected Location For New Airport.png" alt="Selected Location for New Airport thumbnail">
+          
+          <div class="dots"></div>
+        </div>
+        <div class="pad">
+          <h3 class="title">Selected Location for New Airport</h3>
+          <div class="subtitle">Multi-criteria siting (Northeast Ohio)</div>
+          <p class="desc">Candidate airport siting with county context, towns, and access considerations for a short‑list location.</p>
+          <div class="tags"><span class="tag">Suitability</span><span class="tag">Siting</span><span class="tag">Vector</span></div>
+          <div class="links"><a class="btn" href="./assets/pdfs/Selected Location For New Airport.pdf" download>Download PDF</a></div>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="thumb" tabindex="0" data-images="./assets/thumbs/Map of NE Ohio Schools In Towns Near Major Road.png" data-index="0">
+          <img src="./assets/thumbs/Map of NE Ohio Schools In Towns Near Major Road.png" alt="NE Ohio Schools Near Major Roads thumbnail">
+          
+          <div class="dots"></div>
+        </div>
+        <div class="pad">
+          <h3 class="title">NE Ohio Schools Near Major Roads</h3>
+          <div class="subtitle">Accessibility snapshot across 4 counties</div>
+          <p class="desc">Towns within 0.5 miles of major roads and proportion of schools within these accessible areas.</p>
+          <div class="tags"><span class="tag">Accessibility</span><span class="tag">Network</span><span class="tag">Education</span></div>
+          <div class="links"><a class="btn" href="./assets/pdfs/Map of NE Ohio Schools In Towns Near Major Road.pdf" download>Download PDF</a></div>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="thumb" tabindex="0" data-images="./assets/thumbs/Change In Sinosity Of the Green River Mao.png" data-index="0">
+          <img src="./assets/thumbs/Change In Sinosity Of the Green River Mao.png" alt="Green River Sinuosity Over Time thumbnail">
+          
+          <div class="dots"></div>
+        </div>
+        <div class="pad">
+          <h3 class="title">Green River Sinuosity Over Time</h3>
+          <div class="subtitle">Historical channels &amp; rate of change</div>
+          <p class="desc">Time‑series of meander evolution with computed sinuosity and per‑year change.</p>
+          <div class="tags"><span class="tag">Hydrology</span><span class="tag">Time Series</span></div>
+          <div class="links"><a class="btn" href="./assets/pdfs/Change In Sinosity Of the Green River Mao.pdf" download>Download PDF</a></div>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="thumb" tabindex="0" data-images="./assets/thumbs/Map Of Mahoning County Land Cover Classification.png" data-index="0">
+          <img src="./assets/thumbs/Map Of Mahoning County Land Cover Classification.png" alt="Mahoning County Land Cover thumbnail">
+          
+          <div class="dots"></div>
+        </div>
+        <div class="pad">
+          <h3 class="title">Mahoning County Land Cover</h3>
+          <div class="subtitle">NLCD classification</div>
+          <p class="desc">County‑wide land cover classification with developed intensities, agriculture, and wetlands classes.</p>
+          <div class="tags"><span class="tag">NLCD</span><span class="tag">Raster</span><span class="tag">Symbology</span></div>
+          <div class="links"><a class="btn" href="./assets/pdfs/Map Of Mahoning County Land Cover Classification.pdf" download>Download PDF</a></div>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="thumb" tabindex="0" data-images="./assets/thumbs/Visibility from Logan Dam to County Fairgrounds.png" data-index="0">
+          <img src="./assets/thumbs/Visibility from Logan Dam to County Fairgrounds.png" alt="Viewshed: Logan Dam → County Fairgrounds thumbnail">
+          
+          <div class="dots"></div>
+        </div>
+        <div class="pad">
+          <h3 class="title">Viewshed: Logan Dam → County Fairgrounds</h3>
+          <div class="subtitle">Line-of-sight @ 34 m platform</div>
+          <p class="desc">Visibility analysis showing minimum platform height and visible areas based on terrain and land cover.</p>
+          <div class="tags"><span class="tag">Viewshed</span><span class="tag">Terrain</span><span class="tag">Analysis</span></div>
+          <div class="links"><a class="btn" href="./assets/pdfs/Visibility from Logan Dam to County Fairgrounds.pdf" download>Download PDF</a></div>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="thumb" tabindex="0" data-images="./assets/thumbs/Map of 3D Elevation in Youngstown.png" data-index="0">
+          <img src="./assets/thumbs/Map of 3D Elevation in Youngstown.png" alt="3D Elevation — Youngstown, OH thumbnail">
+          
+          <div class="dots"></div>
+        </div>
+        <div class="pad">
+          <h3 class="title">3D Elevation — Youngstown, OH</h3>
+          <div class="subtitle">Point cloud to surface overview</div>
+          <p class="desc">3D elevation rendering with color‑mapped heights from ~820 ft to ~1102 ft.</p>
+          <div class="tags"><span class="tag">Elevation</span><span class="tag">3D</span><span class="tag">DEM</span></div>
+          <div class="links"><a class="btn" href="./assets/pdfs/Map of 3D Elevation in Youngstown.pdf" download>Download PDF</a></div>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="thumb" tabindex="0" data-images="./assets/thumbs/Most vs Least Suitable Nature Preserve Sites.png" data-index="0">
+          <img src="./assets/thumbs/Most vs Least Suitable Nature Preserve Sites.png" alt="Most vs Least Suitable Nature Preserve Sites thumbnail">
+          
+          <div class="dots"></div>
+        </div>
+        <div class="pad">
+          <h3 class="title">Most vs Least Suitable Nature Preserve Sites</h3>
+          <div class="subtitle">Columbiana County, OH</div>
+          <p class="desc">Suitability model using distance from highways, slope, freshwater proximity, and vegetation.</p>
+          <div class="tags"><span class="tag">Suitability</span><span class="tag">Multi-criteria</span></div>
+          <div class="links"><a class="btn" href="./assets/pdfs/Most vs Least Suitable Nature Preserve Sites.pdf" download>Download PDF</a></div>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="thumb" tabindex="0" data-images="./assets/thumbs/Flooding of Kinstowne by 2100.png|./assets/thumbs/Flooded World Map in 2100.png" data-index="0">
+          <img src="./assets/thumbs/Flooding of Kinstowne by 2100.png" alt="Flood Risk: Global + Local thumbnail">
+          <button class="carousel-btn prev" aria-label="Previous" title="Previous">‹</button><button class="carousel-btn next" aria-label="Next" title="Next">›</button>
+          <div class="dots"><span class="dot active"></span><span class="dot"></span></div>
+        </div>
+        <div class="pad">
+          <h3 class="title">Flood Risk: Global + Local</h3>
+          <div class="subtitle">Sea level rise scenarios (to 2100)</div>
+          <p class="desc">Two-scale look at flooding impacts: local effects in Kingstowne, VA, and global inundation patterns.</p>
+          <div class="tags"><span class="tag">Flooding</span><span class="tag">Sea Level</span><span class="tag">Scenario</span></div>
+          <div class="links"><a class="btn" href="./assets/pdfs/Flooding of Kinstowne by 2100.pdf" download>Download PDF</a><a class="btn" href="./assets/pdfs/Flooded World Map in 2100.pdf" download>Download PDF</a></div>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="thumb" tabindex="0" data-images="./assets/thumbs/McCormick Run DEM and Watershed.png" data-index="0">
+          <img src="./assets/thumbs/McCormick Run DEM and Watershed.png" alt="McCormick Run DEM &amp; Watershed thumbnail">
+          
+          <div class="dots"></div>
+        </div>
+        <div class="pad">
+          <h3 class="title">McCormick Run DEM &amp; Watershed</h3>
+          <div class="subtitle">Strahler ordering + basins</div>
+          <p class="desc">Watershed delineation and stream network analysis from DEM with Strahler stream ordering.</p>
+          <div class="tags"><span class="tag">Hydrology</span><span class="tag">DEM</span><span class="tag">Watershed</span></div>
+          <div class="links"><a class="btn" href="./assets/pdfs/McCormick Run DEM and Watershed.pdf" download>Download PDF</a></div>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="thumb" tabindex="0" data-images="./assets/thumbs/Annual Precipitation In Ohio IDW vs Spline Interpolation.png" data-index="0">
+          <img src="./assets/thumbs/Annual Precipitation In Ohio IDW vs Spline Interpolation.png" alt="Annual Precipitation in Ohio thumbnail">
+          
+          <div class="dots"></div>
+        </div>
+        <div class="pad">
+          <h3 class="title">Annual Precipitation in Ohio</h3>
+          <div class="subtitle">IDW vs Spline interpolation</div>
+          <p class="desc">Comparison of two interpolation methods on statewide precipitation observations.</p>
+          <div class="tags"><span class="tag">Interpolation</span><span class="tag">Climate</span></div>
+          <div class="links"><a class="btn" href="./assets/pdfs/Annual Precipitation In Ohio IDW vs Spline Interpolation.pdf" download>Download PDF</a></div>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="thumb" tabindex="0" data-images="./assets/thumbs/Historical Map Of Ann Arbor, 1854.png|./assets/thumbs/Historical Maps of Ann Arbor 1965 &amp; 1967.png|./assets/thumbs/Growth of Ann Arbor.png" data-index="0">
+          <img src="./assets/thumbs/Historical Map Of Ann Arbor, 1854.png" alt="Ann Arbor: History &amp; Growth thumbnail">
+          <button class="carousel-btn prev" aria-label="Previous" title="Previous">‹</button><button class="carousel-btn next" aria-label="Next" title="Next">›</button>
+          <div class="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+        </div>
+        <div class="pad">
+          <h3 class="title">Ann Arbor: History &amp; Growth</h3>
+          <div class="subtitle">Georeferenced 1854 + 1965/67 maps and 2022 extent</div>
+          <p class="desc">Historical maps and a modern urban footprint to visualize the city’s expansion over time.</p>
+          <div class="tags"><span class="tag">Georeferencing</span><span class="tag">Urban Growth</span><span class="tag">History</span></div>
+          <div class="links"><a class="btn" href="./assets/pdfs/Historical Map Of Ann Arbor, 1854.pdf" download>Download PDF</a><a class="btn" href="./assets/pdfs/Historical Maps of Ann Arbor 1965 &amp; 1967.pdf" download>Download PDF</a><a class="btn" href="./assets/pdfs/Growth of Ann Arbor.pdf" download>Download PDF</a></div>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="thumb" tabindex="0" data-images="./assets/thumbs/Elevation Map of Edenville Dam Before and After Flooding.png" data-index="0">
+          <img src="./assets/thumbs/Elevation Map of Edenville Dam Before and After Flooding.png" alt="Edenville Dam Elevation Change thumbnail">
+          
+          <div class="dots"></div>
+        </div>
+        <div class="pad">
+          <h3 class="title">Edenville Dam Elevation Change</h3>
+          <div class="subtitle">Before/after flooding</div>
+          <p class="desc">Elevation differences illustrating geomorphic change from the Edenville Dam collapse.</p>
+          <div class="tags"><span class="tag">Elevation</span><span class="tag">Disaster</span><span class="tag">Change</span></div>
+          <div class="links"><a class="btn" href="./assets/pdfs/Elevation Map of Edenville Dam Before and After Flooding.pdf" download>Download PDF</a></div>
+        </div>
+      </article>
+    
+    </div>
+
+    <section id="about">
+      <h2>About</h2>
+      <p class="desc">I&#x27;m a Archeologist and Geologist with a focus in Oceanography. I have a strong GIS background using machine learning and a variety of GIS techniques for research applications in paleoseismology, land cover use, reconstructive historical maps, ancient migration patterns of native peoples, and predictive hydrologic models.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><a class="btn" href="mailto:phullman@umich.edu">phullman@umich.edu</a></p>
+      <p><a class="btn" href="tel:571-294-4232">571-294-4232</a></p>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap" style="color:#9ca3af">© 2025 Patrick Hullman · Plain HTML, dark mode</div>
+  </footer>
+
+  <script>
+    function setupCarousel(root){
+      const imgs = (root.getAttribute('data-images')||'').split('|').filter(Boolean);
+      if(!imgs.length) return;
+      const imgEl = root.querySelector('img');
+      const dots = Array.from(root.querySelectorAll('.dot'));
+      const prev = root.querySelector('.prev');
+      const next = root.querySelector('.next');
+      let idx = 0;
+      let timer = null;
+      const delay = 4000;
+      function show(i){
+        idx = (i + imgs.length) % imgs.length;
+        imgEl.src = imgs[idx];
+        if(dots.length) dots.forEach((d,di)=>d.classList.toggle('active', di===idx));
+        root.setAttribute('data-index', idx.toString());
+      }
+      function start(){ if(!timer) timer = setInterval(()=>show(idx+1), delay); }
+      function stop(){ if(timer){ clearInterval(timer); timer=null; } }
+      if(prev) prev.addEventListener('click', ()=>{ stop(); show(idx-1); start(); });
+      if(next) next.addEventListener('click', ()=>{ stop(); show(idx+1); start(); });
+      if(dots.length) dots.forEach((d,di)=>d.addEventListener('click', ()=>{ stop(); show(di); start(); }));
+      root.addEventListener('mouseenter', stop);
+      root.addEventListener('mouseleave', start);
+      root.addEventListener('focusin', stop);
+      root.addEventListener('focusout', start);
+      root.addEventListener('keydown', (e)=>{
+        if(e.key === 'ArrowLeft'){ stop(); show(idx-1); start(); }
+        if(e.key === 'ArrowRight'){ stop(); show(idx+1); start(); }
+      });
+      start();
+    }
+    window.addEventListener('DOMContentLoaded', ()=>{
+      document.querySelectorAll('.thumb').forEach(setupCarousel);
+    });
+  </script>
+</body>
+</html>
